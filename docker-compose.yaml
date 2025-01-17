@@ -4,16 +4,16 @@ volumes:
 services:
   frontend:
     build:
-      context: ./flowers_client
+      context: ./client
       dockerfile: Dockerfile
     image: frontend_image
     container_name: frontend_container
     volumes:
-      - ./flowers_client/:/app
+      - ./client/:/app
     ports:
       - "3000:3000"
     env_file:
-      - ./flowers_client/.env
+      - ./client/.env
     depends_on:
       postgres:
         condition: service_healthy
@@ -23,16 +23,16 @@ services:
 
   backend:
     build:
-      context: ./flowers_server
+      context: ./server
       dockerfile: Dockerfile
     image: backend_image
     container_name: backend_container
     volumes:
-      - ./flowers_server/:/app
+      - ./server/:/app
     ports:
       - "4040:4040"
     env_file:
-      - ./flowers_server/.env
+      - ./server/.env
     depends_on:
       postgres:
         condition: service_healthy
@@ -45,11 +45,11 @@ services:
     container_name: postgres_container
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./flowers_server/database.sql:/docker-entrypoint-initdb.d/database.sql
+      - ./server/database.sql:/docker-entrypoint-initdb.d/database.sql
     ports:
       - "5432:5432"
     env_file:
-      - ./flowers_server/.env
+      - ./server/.env
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
