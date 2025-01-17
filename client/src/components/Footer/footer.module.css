@@ -1,0 +1,103 @@
+.footer{
+    width: 100%;
+    margin-top: 2em;
+    padding: 2em 1em;
+    background-color: #333333;
+    color: var(--primary-color);
+    font-family: var(--font-family-ru);
+    font-size: 14px;
+    letter-spacing: .5px;
+    z-index: 80;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.contacts_containers{
+    display: flex;
+    align-items: start;
+    gap: 1em;
+}
+
+.contact_info{
+    width: 150px;
+}
+
+.contact_info h3, .contact_info p, .contact_info a{
+    text-overflow: ellipsis;
+    overflow: hidden;  
+    white-space: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.contact_info h3 {
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    text-decoration: underline var(--light-color);
+    margin-bottom: .3em;
+}
+
+.copyright hr {
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid var(--light-color);
+}
+
+@media screen and (min-width: 920px) {
+    .footer{
+        width: 100%;
+        margin-top: 2em;
+        padding: 3em 6em;
+        background-color: #333333;
+        color: var(--primary-color);
+        font-family: var(--font-family-ru);
+        font-size: 14px;
+        letter-spacing: .5px;
+        z-index: 80;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+    .contact_info{
+        width: 180px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .footer{
+        width: 100%;
+        margin-top: 3em;
+        padding: 3em 6em;
+        background-color: #333333;
+        color: var(--primary-color);
+        font-family: var(--font-family-ru);
+        font-size: 16px;
+        letter-spacing: .5px;
+        z-index: 80;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+    .contact_info{
+        width: 230px;
+    }
+    .copyright hr {
+        width: 100%;
+        margin: 1em 0;
+        border: 1px solid var(--light-color);
+    }
+}

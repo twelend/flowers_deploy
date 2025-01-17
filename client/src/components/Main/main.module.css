@@ -1,0 +1,208 @@
+.main{
+    font-family: var(--font-family-ru);
+    max-width: 770px;
+    padding: 2em 2em 0;
+}
+.hidden {
+    display: none;
+}
+.main_title_mobile, .main_title_desktop{
+    color: var(--secondary-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.main_title_desktop{
+    display: none;
+}
+
+.main_requests{
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.request_item button{
+    font-family: var(--font-family-ru);
+    width: 85px;
+    padding: .5em;
+    text-overflow: ellipsis;
+    overflow: hidden;  
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(46,43,107);
+    background: linear-gradient(0deg, rgba(46,43,107,.1) 43%, rgba(231, 209, 241, 0.753) 100%);
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+
+.main_search {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+.main_search input {
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    outline-color: var(--light-color);
+
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-family: var(--font-family-ru);
+    font-weight: 500;
+}
+
+.main__card_list{
+    margin-top: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center
+}
+
+.main__more_btn button{
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-ru);
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: underline;
+}
+.main_filter{
+    display: none;
+}
+
+.clear_filters {
+    display: block;
+}
+
+@media screen and (min-width: 700px) {
+    .request_item button{
+        font-family: var(--font-family-ru);
+        width: 120px;
+        padding: .5em;
+        text-overflow: ellipsis;
+        overflow: hidden;  
+        white-space: nowrap;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+
+        color: var(--secondary-color);
+        font-weight: 500;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background: rgb(46,43,107);
+        background: linear-gradient(0deg, rgba(46,43,107,.1) 43%, rgba(231, 209, 241, 0.753) 100%);
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    }
+    .main{
+        font-family: var(--font-family-ru);
+        max-width: 1000px;
+        padding: 2em 2em 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main{
+        font-family: var(--font-family-ru);
+        max-width: none;
+        padding: 2em 2em 0;
+    }
+
+    .clear_filters {
+        display: none;
+    }
+
+    .main_search input {
+        width: 60%;
+        padding: 1em;
+        border-radius: 8px;
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+        outline-color: var(--light-color);
+    
+        color: var(--secondary-color);
+        font-size: 18px;
+        font-family: var(--font-family-ru);
+        font-weight: 500;
+    }
+
+    .main_requests {
+        display: none;
+    }
+    .main_title_mobile{
+        display: none;
+    }
+    .main_title_desktop{
+        margin-top: 2em;
+        display: block;
+    }
+    .main__card_list{
+        margin-top: 2.5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3em;
+        justify-content: center;
+    }
+
+    .main_filter{
+        width: 60%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        margin: 2em auto;
+        padding: 1em;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter_item{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        gap: .5em;
+        min-width: 200px;
+    }
+    .filter_item select{
+        padding: .5em;
+        border: none;
+        border-radius: 8px;
+        outline: 1px solid var(--light-color);
+        font-family: var(--font-family-ru);
+        font-size: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        width: 90%;
+        overflow: 4px solid var(--light-color);
+    }
+    .filter_item select option{
+        font-family: var(--font-family-ru);
+        font-size: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        padding: .5em;
+    }
+}

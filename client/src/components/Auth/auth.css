@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.auth {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.header_auth {
+    background-color: rgba(51, 51, 51, 0.87);
+    padding: 2em 2em 1em;
+}
+
+.header_auth h1 {
+    color: var(--primary-color);
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+.auth-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.auth-box {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 4px;
+  background-color: var(--light-color);
+  transition: all 0.3s ease;
+}
+
+.slider.slide-right {
+  left: 50%;
+}
+
+.form-container {
+  position: relative;
+  height: 300px;
+}
+
+.auth-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.auth-form.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--dark-color);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--dark-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-button:hover {
+  background-color: var(--dark-color);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.toggle-button {
+  flex: 1;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: var(--dark-color);
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.toggle-button.active {
+  font-weight: 600;
+}
+
+.toggle-button:hover {
+  color: var(--dark-color);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.auth-form.error {
+  animation: shake 0.5s;
+}

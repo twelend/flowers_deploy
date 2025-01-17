@@ -1,0 +1,101 @@
+.card {
+    position: relative;
+    max-width: 770px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(231, 209, 241, 0.753) 0px 54px 55px, rgba(231, 209, 241, 0.753) 0px -12px 30px, rgba(231, 209, 241, 0.753) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 1.5em;
+}
+.add_favorites button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.card_img img{
+    max-width: 350px;
+    width: 330px;
+    height: 300px;
+    object-fit: contain;
+}
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+.card__short_info p {
+    text-transform: capitalize;
+    padding: .2em;
+    font-family: var(--font-family-ru);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__short_info span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card__more_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1em;
+}
+
+.card__info_btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+    font-family: var(--font-family-ru);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--light-color);
+    position: relative;
+    bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .card {
+        max-width: 770px;
+        width: 85%;
+        border: none;
+        border-radius: 10px;
+        box-shadow: rgba(231, 209, 241, 0.753) 0px 54px 55px, rgba(231, 209, 241, 0.753) 0px -12px 30px, rgba(231, 209, 241, 0.753) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding: 1.5em;
+    }
+    .card_info {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .card__short_info span {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .card__short_info p {
+        text-transform: capitalize;
+        padding: .2em;
+        font-family: var(--font-family-ru);
+        font-size: 18px;
+        font-weight: 400;
+    } 
+    .card_img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card {
+        max-width: 500px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: rgba(231, 209, 241, 0.753) 0px 54px 55px, rgba(231, 209, 241, 0.753) 0px -12px 30px, rgba(231, 209, 241, 0.753) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding: 1.5em;
+    }
+}
