@@ -10,6 +10,8 @@ COPY package*.json ./
 # Устанавливаем зависимости
 RUN npm install
 
+RUN npm install -g concurrently
+
 # Копируем остальные файлы проекта
 COPY . .
 
